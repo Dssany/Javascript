@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#wrap{background: pink;width:400px;}
+	img {width:400px;height:400px;}
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	num =1;
+	function displaymin(){
+		--num;
+		if(num<1){
+			num=8;
+		}
+		document.getElementById("myImage").src = "최근상품0" + num + ".jpg";
+	}
+	function displayplus(){
+		++num;
+		if(num>8){
+			num=1;
+		}
+		document.getElementById("myImage").src = "최근상품0" + num + ".jpg";
+	}
+
+</script>
+<div id="wrap">
+<img id="myImage" src="최근상품01.jpg"><br>
+
+<input type="button" onclick="displaymin()" value="이전">
+<input type="button" onclick="displayplus()" value="다음">
+</div>
+
+
+
+</body>
+</html>

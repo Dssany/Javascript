@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	var city=["Seoul","Busan","Incheon"];
+	city[4] ="test";
+	city[5] = true;
+	function printArr(){
+		console.log("printArr() 클릭" + city.length);
+		var i;
+		
+	for (i = 0; i < city.length; i++) {
+			label = document.createElement("label");//태그만드는것
+			label.innerHTML = "배열데이터[i]=" + city[i] + "<br>";
+			document.getElementById("print").appendChild(label);
+
+			//document.getElementById("print").innerHTML = "배열데이터[i]=" + city[i]
+			//		+ "<br>";
+			//document.write("배열데이터[i]=" + city[i] + "<br>");
+		}
+
+	}
+	//printArr();
+	function reSetArr() {
+		city.length = 0;
+		document.getElementById("print").innerHTML = "";
+			
+	}
+</script>
+</head>
+<body>
+
+
+<div id="print"></div>
+	<label onclick="printArr()">배열 출력</label>
+	<button type="button" onclick="reSetArr()">초기화</button>
+</body>
+</html>

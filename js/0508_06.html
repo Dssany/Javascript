@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	function display(){
+		n = document.getElementById('name').value
+		document.getElementById('name').value = ""
+			document.getElementById('name2').value = n
+	}
+
+</script>
+
+<script type="text/javascript">
+
+	function display02(){
+		name = document.getElementById('name01').value
+			document.getElementById('name01').value = ""
+			document.getElementById('name02').value = name
+			document.getElementById('name03').value = name
+	}
+
+</script>
+
+
+
+	name : <input type="text" id="name">
+	name2 : <input type="text" id=name2><br>
+	<input type="button" onclick="display()" value="click">
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="d1"></p><p id="d2"></p><p id="d3"></p>
+<button type="button" onclick="start()">시작</button>
+<button type="button" onclick="end()">종료</button>
+
+
+
+<script>
+function dicClock(){
+	var today = new Date();
+	document.getElementById("d1").innerHTML = today.getFullYear() + "년";
+	document.getElementById("d2").innerHTML = today.getMonth() + 1  + "월" +today.getDate() + "일";
+	document.getElementById("d3").innerHTML = today.getHours() + "시" + today.getMinutes() + "분"
+	+ today.getSeconds() + "초";
+
+	//e = setTimeout("dicClock()",1000);//자기자신에 대한 함수만 호출가능.
+	
+}
+function start(){
+	//e = setTimeout("dicClock()",1000);
+	e = setInterval("dicClock()",1000);
+}
+function end(){
+	clearTimeout(e)
+}
+
+//dicClock();
+
+
+</script>
+</body>
+</html>

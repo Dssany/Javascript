@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<hr>
+
+<script>
+function add03(){
+
+var i;sum=0;
+for(i=0;i<arguments.length;i++){
+	sum = sum + arguments[i];
+	document.write("arguments : " + arguments[i] + " , ");
+}
+document.write("<br>수행 결과 : " + sum + "<p/>")
+}
+add03(2,3);
+add03(2,3,4);
+add03(4,5,6,7,8);
+add03(1,2,3,4,5,6,7,8,9,10);
+
+</script>
+
+
+
+
+<script>
+function add01(x,y,z){
+document.write("함수호출 인자 부족 : " + x + "," + y + "," + z + "<br>");
+var sum;
+if((y==undefined) && (z== undefined)){sum=x;}
+else if(z==undefined){sum=z+y;}
+else{sum=z+y+z;}
+return sum;
+}
+var r1=add01(2);var r2=add01(2,3);var r3=add01(4,5,6);
+document.write("<br>함수호출 인자 부족 : " + r1 + "<p/>");
+document.write("함수호출 인자 부족 : " + r2 + "<p/>");
+document.write("정상적인 함수호출  : " + r3 + "<p/>");
+
+
+
+
+</script>
+
+
+<hr>
+
+
+
+
+
+
+
+
+
+<script>
+	function add(){var sum=1;return sum;}
+	function add(x){var sum=x+1;return sum;}
+	function add(x,y){var sum=x+y;return sum;}
+	function add(x,y,z){var sum=x+y+z;return sum;}
+
+		document.write("함수호출 인자 없음 : " + add() + "<p/>");
+		document.write("함수호출 인자 부족 : " + add(1) + "<p/>");
+		document.write("함수호출 인자 부족 : " + add(2,3) + "<p/>");
+		document.write("정상적인 함수 호출 : " + add(4,5,6) + "<p/>");
+		document.write("7,8,9만 인자값으로 적용 : " + add(7,8,9,10) + "<p/>");
+		
+
+</script>
+</body>
+</html>

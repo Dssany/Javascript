@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.image{width:100px;height:100px;}
+
+
+
+</style>
+<script type="text/javascript">
+	function display03(){
+		document.getElementById("myImage").src = "맛집.png"
+	}
+
+</script>
+</head>
+<body>
+	<img id="myImage" src="16.gif" onclick="display03()">
+
+
+
+
+<script type="text/javascript">
+
+	function display02(){
+		name = document.getElementById('name01').value
+			document.getElementById('name01').value = "";
+			document.getElementById('name02').innerHTML = name
+			document.getElementById('name03').innerHTML = name
+	}
+
+</script>
+
+	name : <input type="text" id="name01">
+	<h1 id="name02">텍스트 값</h1>
+	<label id="name03">텍스트 값</label>
+	<input type="button" onclick="display02()" value="클릭">
+<hr>
+</body>
+</html>

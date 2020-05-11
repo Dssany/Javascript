@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	var kdata =['서울','부산','서울','청주','대구'];
+	function printArr(item,index){
+		document.write("배열데이터[" + index + "] : " + item + "<br>");
+	}
+	kdata.forEach(printArr);
+	document.write("indexof(서울) : " + kdata.indexOf("서울"));
+	var nextIndex = kdata.indexOf("서울")
+	document.write("<br>indexof(서울) : " + kdata.indexOf("서울",nextIndex +1));
+	
+	var data = {"f0":100,"f1":200}
+	document.write("<hr>fo : " +data.f0 + "<br>")
+	document.write("f1 : " +data['f1'] + "<br>")
+	data.f3 = "newData";
+	document.write("f3 : " + data['f3'])
+	
+
+
+</script>
+</body>
+</html>

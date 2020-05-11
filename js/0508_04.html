@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	function printMsg(n,a){
+		document.write("수신 name : " + n + "<br>")
+		document.write("수신 age : " + a + "<br>")
+	}
+
+</script>
+<button type="button" onclick="printMsg('홍기동',21)">클릭</button>
+
+
+
+	<script type="text/javascript">
+		function refunc(){
+			var kor=95;
+			return kor;
+			
+		}
+	getKor = refunc();
+	document.write("return : " + getKor);
+	
+	</script>
+
+
+<script type="text/javascript">
+	function getGrade(){
+		let kor =95;
+		kor =95;
+		document.write("함수 안 kor01 : "  + kor+"<br>")//지역에서만 쓰려면 var를 붙이고 전역에서 쓰려면 빼서 작성
+
+	}
+ 	var kor01 = 100;
+ 	getGrade();
+ 	document.write("함수 밖 kor01 : " + kor + "<br>")
+
+
+</script>
+
+
+</body>
+</html>

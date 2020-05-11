@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var city=["서울","부산","대전"]
+	var joindata1 = city.join();
+	var joindata2 = city.join('-');
+	var joindata3 = city.join('그리고');
+
+	document.write("조인전 : " + city + "<p/>");
+	document.write("조인결과1 : " + typeof joindata1 + "<p/>");
+	document.write("조인결과2 : " + joindata2 + "<p/>");
+	document.write("조인결과3 : " + joindata3 + "<p/>");
+	document.write("=========concat========");
+	var city2=["서울02","부산02","대전02"];
+	var data01 =  city.concat("수원","수수원")
+	var data02 = city.concat(city2)
+	document.write("concat01 : " + data01 + "</p>");
+	document.write("concat02 : " + data02 + "</p>");
+	document.write("=========slice========");
+	document.write("slice전데이터 : " + data02 + "<p/>");
+	document.write("1-4 : " + data02.slice(1,4) + "</p>");
+	document.write("=========push&pop========");
+	document.write("push전데이터 : " + data02 + "<p/>");
+	data02 = data02.push("추가01","추가02")
+	document.write("push후데이터 : " + typeof data02 + "<p/>");
+	data02 = data02.pop()
+	document.write("pop데이터 : " + data02 + "<p/>");
+	document.write("=========unshift & shift========");
+	document.write("unshift 전 데이터 : " + data02 + "<p/>");
+	data02.unshift("오늘","내일");
+	document.write("unshift 후 데이터 : " + data02 + "<p/>");
+	data02.shift();
+	document.write("shift 후 데이터 : " + data02 + "<p/>");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
