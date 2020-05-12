@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body onload="dicimg()">
+
+<script type="text/javascript">
+	var imgsrc =["최근상품01.jpg","최근상품02.jpg","최근상품03.jpg","최근상품04.jpg","최근상품05.jpg","최근상품06.jpg","최근상품07.jpg",
+	"최근상품08.jpg"];
+	
+	bol = true;
+	num =0;
+	
+	function mover(obj) {clearTimeout(e);bol=false;}
+	function mout(obj) {if(bol==true){e = setInterval("dicimg()",500)}}
+	
+	function dicimg(){
+		++num;
+		if(num>=8){
+			num=0;
+		}
+		document.getElementById("d1").src = imgsrc[num]
+		console.log(num)
+	}
+	
+	function displaymin(){
+		--num;
+		if(num<1){
+			num=7;
+		}
+		document.getElementById("d1").src =  imgsrc[num]
+	}
+	function displayplus(){
+		++num;
+		if(num>=8){
+			num=0;
+		}
+		document.getElementById("d1").src =  imgsrc[num]
+	}
+
+</script>
+<div id="wrap">
+<img src="왼쪽화살표.jpg" onclick="displaymin()" style="width:100px;height:100px;">
+<img id="d1" src="최근상품01.jpg" style="width:400px;height:500px;" onmouseout="mout(this)" onmouseover="mover(this)">
+<img src="오른쪽화살표.jpg" onclick="displayplus()" style="width:100px;height:100px;">
+</div>
+
+
+
+</body>
+</html>

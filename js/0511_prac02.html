@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	
+	img {width:200px;height:200px;}
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	var imgsrc =["최근상품01.jpg","최근상품02.jpg","최근상품03.jpg","최근상품04.jpg","최근상품05.jpg","최근상품06.jpg","최근상품07.jpg",
+	"최근상품08.jpg"];
+	
+	var imgbaguni=[];
+	
+	
+	function insert(){
+		for(i=0;i<imgsrc.length;i++){
+		document.getElementById("im" + i+1) = imgsrc[0];
+		}
+		
+	}
+	function push(src){
+		img = document.createElement('img');
+		img.setAttribute('src',src);img.setAttribute('width',100);img.setAttribute('height',122);
+		imgbaguni = img;
+		document.body.appendChild(imgbaguni);
+	}
+	
+
+
+</script>
+
+<table border="3" align="center">
+<tr>
+	<td><img id="im1"src="최근상품01.jpg" onclick="push('최근상품01.jpg')"></td>
+	<td><img id="im2"src="최근상품02.jpg" onclick="push('최근상품02.jpg')"></td>
+	<td><img id="im3"src="최근상품03.jpg" onclick="push('최근상품03.jpg')"></td>
+	<td><img id="im4"src="최근상품04.jpg" onclick="push('최근상품04.jpg')"></td>
+</tr>
+<tr>
+	<td><img id="im5"src="최근상품05.jpg" onclick="push('최근상품05.jpg')"></td>
+	<td><img id="im6"src="최근상품06.jpg" onclick="push('최근상품06.jpg')"></td>
+	<td><img id="im7"src="최근상품07.jpg" onclick="push('최근상품07.jpg')"></td>
+	<td><img id="im8"src="최근상품08.jpg" onclick="push('최근상품08.jpg')"></td>
+</tr>
+	
+</table>
+
+
+
+</body>
+</html>

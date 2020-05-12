@@ -6,23 +6,25 @@
 </head>
 <body>
 <script type="text/javascript">
-	var kdata =['서울','부산','서울','청주','대구'];
-	function printArr(item,index){
-		document.write("배열데이터[" + index + "] : " + item + "<br>");
-	}
-	kdata.forEach(printArr);
-	document.write("indexof(서울) : " + kdata.indexOf("서울"));
-	var nextIndex = kdata.indexOf("서울")
-	document.write("<br>indexof(서울) : " + kdata.indexOf("서울",nextIndex +1));
-	
-	var data = {"f0":100,"f1":200}
-	document.write("<hr>fo : " +data.f0 + "<br>")
-	document.write("f1 : " +data['f1'] + "<br>")
-	data.f3 = "newData";
-	document.write("f3 : " + data['f3'])
-	
-
-
+       (function() {
+           var images = [
+               "최근상품01.jpg",
+               "최근상품02.jpg",
+               "최근상품03.jpg",
+               "최근상품04.jpg"
+           ], columns = 3,
+           l = images.length, i,
+           table = document.createElement('table'),
+           tbody = table.appendChild(document.createElement('tbody')),
+           tr, td, img;
+           for( i=0; i<l; i++) {
+               if( i % columns == 0) tr = tbody.appendChild(document.createElement('tr'));
+               tr.appendChild(document.createElement('td'))
+                 .appendChild(document.createElement('img'))
+                 .src = images[i];
+           }
+           document.body.appendChild(table);
+       })();
 </script>
 </body>
 </html>
