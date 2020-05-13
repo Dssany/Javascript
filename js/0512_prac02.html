@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+
+
+function pwdbck(){
+	inPut = document.getElementById("pw").value;
+	outPut = document.getElementById("pwck").value;
+	if(inPut==outPut){
+		document.getElementById("tex").innerHTML = "일치"
+	}else{
+		document.getElementById("tex").innerHTML = "불일치"
+	}
+}
+
+
+function subchk(){
+	pw = document.getElementById("pw").value;
+	pwck = document.getElementById("pwck").value;
+	
+	if(document.getElementById("id").value==""){
+		alert("id는 필수사항입니다.")
+		document.getElementById("id").focus();
+	}else if(document.getElementById("pw").value==""){
+		alert("pw는 필수사항입니다.")
+		document.getElementById("id").focus();
+	}else if(pw!=pwck){
+		alert("비밀번호가 불일치합니다\다시입력바랍니다!")
+		document.getElementById("pwck").focus();
+		return
+	}else{
+		window.open("0512_prac03.html")
+		
+		
+	}
+}
+
+</script>
+
+
+</head>
+<body>
+	<h1>계정 등록 페이지 입니다.</h1>
+	<input type="text" id="id" placeholder="아이디" ><b style="color:red;">(*필수항목)</b><br>
+	<input type="text" id="pw" placeholder="비밀번호" onchange="pwdbck()"><b style="color:red;">(*필수항목)</b><br>
+	<input type="text" id="pwck"placeholder="비밀번호확인" onchange="pwdbck()"><b id="tex" style="color:blue;"></b><br>
+	<input type="text" placeholder="이름"><br>
+	<hr>
+	<input type="button" value="등록" onclick="subchk()">
+	
+</body>
+</html>

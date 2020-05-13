@@ -5,12 +5,30 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 	function myFocus(){
-		document.getElementById("pw").focus();
+		document.getElementById("pw").focus();//뭔가 내용이 빠졌을때 해당하는곳으로 포커스를 맞추기 위한 기능
 	}
 	
 </script>
+<script type="text/javascript">
+	function pwchk(){
+		inPut = document.getElementById("inPut").value;
+		document.getElementById("outPut").value = inPut;
+		document.getElementById("inPut").value ="";
+	}
+	
+</script>
+<script> function goForward(){window.history.forward()}</script>
 </head>
 <body>
+	<h1>다음 페이지 이동</h1>
+	<a href="0512_01.html">0512_01.html 이동</a>
+	<input type="button" onclick="goForward()" value="다음페이지 이동">
+
+<hr>
+	<input type="text" id="inPut" onchange="pwchk()"><br>
+	<input type="text" id="outPut"><br>
+	<input type="text"><br>
+<hr>
 	name : <input type="text"><br>
 	passwd : <input type="text" id="pw"><br>
 	<input type="button" value="focus" onclick="myFocus()">

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function test(){
+		//비교,연산,처리...등	
+		//fo.submit()//원하는 연산처리하고 이 코드 작성시 페이지가 넘어감
+		location.href="0512_05.html" //값이 안넘어가고 단순하게 페이지이동만한다
+	}
+</script>
+
+</head>
+<body>
+	<form id="fo" action="0512_05.html">
+		이름<input type="text" name="name">(*필수항목)<br>
+		주소<input type="text" name="addr">(*필수항목)<br>
+		<input type="submit" value="(sub)회원가입">
+		<input type="button" value="(btn)회원가입" onclick="test()">
+		<input type="button" value="회원가입" onclick="location.href='0512_05.html'">
+	</form>
+</body>
+</html>

@@ -29,8 +29,12 @@ function turnOff(){
 	document.getElementById("sw").src=path;
 }
 </script>
+
+<script>function goBack(){window.history.back()}</script>
 </head>
 <body>
+
+<input type="button" value="이전페이지" onclick="goBack()">
 	<div class="wrapper">
 		<div class="light">
 			<img src="resources/images/switch_on.png" id="sw" onClick="turnOff()"/>
